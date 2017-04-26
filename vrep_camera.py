@@ -24,7 +24,7 @@ if clientID!=-1:
             err, resolution, image = vrep.simxGetVisionSensorImage(clientID, frontCamHandle, 0, vrep.simx_opmode_buffer)
             if err == vrep.simx_return_ok:
               image_byte_array = array.array('b', image)
-              image_buffer = Image.frombuffer("RGB", (resolution[0], resolution[1]), image_byte_array, "raw", "RGB", 0, 1)
+              image_buffer = Image.frombuffer("RGB", (resolution[0], resolution[1]), image_byte_array, "raw", "BGR", 0, 1)
               img_out = np.asarray(image_buffer)
               img_out = cv2.flip(img_out, 0)
               cv2.imshow("DroneCamera",img_out)
