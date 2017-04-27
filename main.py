@@ -21,13 +21,18 @@ try:
         # Initialize Rotors
         vrep_rotors.init_rotors(clientID)
 
+        # Reset quadcopter position
+        err, pos = vrep.simxGetObjectPosition(clientID, quadHandle, -1, vrep.simx_opmode_buffer)
+        pos[2] = 0.0
+        vrep.simxSetObjectPosition(clientID, quadHandle, -1, pos, vrep.simx_opmode_oneshot)
+
         # Start simulation
         vrep.simxStartSimulation(clientID, vrep.simx_opmode_oneshot_wait)
 
-        val = 5.0
+        throttle = 5.0
         while vrep.simxGetConnectionId(clientID) != -1:
-            if val < 5.4:
-                val=val+0.001
+            if throttle < 5.4:
+                throttle=throttle+0.001
 
             # Get IMU
             imu = vrep_imu.get_imu(clientID)
@@ -35,7 +40,7 @@ try:
             print(height)
 
             # Send Rotor Command
-            rotor_vels = [val,val,val,val]
+            rotor_vels = [throttle,throttle,throttle,throttle]
             vrep_rotors.move_rotors(clientID, rotor_vels)
 
             # Get Camera
