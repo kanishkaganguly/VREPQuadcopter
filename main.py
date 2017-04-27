@@ -1,5 +1,5 @@
 import vrep
-import vrep_gyro
+import vrep_imu
 import vrep_camera
 import vrep_rotors
 import cv2
@@ -12,7 +12,8 @@ try:
         print('Main Script Started')
 
         # Initialize IMU
-        vrep_gyro.init_imu(clientID)
+        err, quadHandle = vrep.simxGetObjectHandle(clientID,'Quadricopter_base',vrep.simx_opmode_blocking)
+        vrep_imu.init_imu(clientID,quadHandle)
 
         # Initialize Camera
         camHandle = vrep_camera.init_cam(clientID)
@@ -23,12 +24,18 @@ try:
         # Start simulation
         vrep.simxStartSimulation(clientID, vrep.simx_opmode_oneshot_wait)
 
+        val = 5.0
         while vrep.simxGetConnectionId(clientID) != -1:
+            if val < 5.4:
+                val=val+0.001
+
             # Get IMU
-            imu = vrep_gyro.get_imu(clientID)
+            imu = vrep_imu.get_imu(clientID)
+            height = vrep_imu.get_height(clientID, quadHandle)
+            print(height)
 
             # Send Rotor Command
-            rotor_vels = [5.3, 5.3, 5.3, 5.3]
+            rotor_vels = [val,val,val,val]
             vrep_rotors.move_rotors(clientID, rotor_vels)
 
             # Get Camera
@@ -38,7 +45,6 @@ try:
                 cv2.waitKey(1)
             else:
                 pass
-
         cv2.destroyAllWindows()
     else:
         print "Failed to connect to remote API Server"

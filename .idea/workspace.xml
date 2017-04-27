@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70d5a58d-579d-4ab6-8e32-417be58964ad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vrep_gyro.py" afterPath="$PROJECT_DIR$/vrep_imu.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vrep_test_scene.ttt" afterPath="$PROJECT_DIR$/vrep_test_scene.ttt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vrep.py" afterPath="$PROJECT_DIR$/vrep.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vrep_camera.py" afterPath="$PROJECT_DIR$/vrep_camera.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vrep_gyro.py" afterPath="$PROJECT_DIR$/vrep_gyro.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vrep_rotors.py" afterPath="$PROJECT_DIR$/vrep_rotors.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/VREP_Tests$main.coverage" NAME="main Coverage Results" MODIFIED="1493236697234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/VREP_Tests$main.coverage" NAME="main Coverage Results" MODIFIED="1493249833192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/VREP_Tests$vrep_cam_test2.coverage" NAME="vrep_cam_test2 Coverage Results" MODIFIED="1493152319223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/VREP_Tests$vrep_rotors.coverage" NAME="vrep_rotors Coverage Results" MODIFIED="1493225307055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/VREP_Tests$vrep_gyro.coverage" NAME="vrep_gyro Coverage Results" MODIFIED="1493152641823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -47,16 +44,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vrep_gyro.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vrep_gyro.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="vrep_rotors.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vrep_rotors.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -67,11 +54,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="vrep_imu.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vrep_imu.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="44" lean-forward="false" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+            <state relative-caret-position="420">
+              <caret line="37" column="42" lean-forward="true" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -105,6 +102,7 @@
         <option value="$PROJECT_DIR$/vrep.py" />
         <option value="$PROJECT_DIR$/vrep_camera.py" />
         <option value="$PROJECT_DIR$/vrep_rotors.py" />
+        <option value="$PROJECT_DIR$/vrep_imu.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
@@ -215,7 +213,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="VREP_Tests" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vrep_gyro.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vrep_imu.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -492,7 +490,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vrep_gyro.py">
+    <entry file="file://$PROJECT_DIR$/vrep_imu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
@@ -510,7 +508,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vrep_gyro.py">
+    <entry file="file://$PROJECT_DIR$/vrep_imu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
@@ -562,6 +560,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vrep_rotors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="81" lean-forward="false" selection-start-line="2" selection-start-column="81" selection-end-line="2" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vrep_camera.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -572,26 +578,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vrep_gyro.py">
+    <entry file="file://$PROJECT_DIR$/vrep_imu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vrep_rotors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="81" lean-forward="false" selection-start-line="2" selection-start-column="81" selection-end-line="2" selection-end-column="81" />
+        <state relative-caret-position="195">
+          <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="44" lean-forward="false" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+        <state relative-caret-position="420">
+          <caret line="37" column="42" lean-forward="true" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
