@@ -13,9 +13,9 @@ def init_imu(clientID, quadHandle):
 
     vrep.simxGetObjectPosition(clientID, quadHandle, -1, vrep.simx_opmode_streaming)
 
-def get_height(clientID, quadHandle):
+def get_pos(clientID, quadHandle):
     err, pos = vrep.simxGetObjectPosition(clientID, quadHandle, -1, vrep.simx_opmode_buffer)
-    return pos[2]
+    return pos
 
 def get_imu(clientID):
     err, gX = vrep.simxGetFloatSignal(clientID, 'gyroX', vrep.simx_opmode_buffer)
