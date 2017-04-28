@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import vrep
 import vrep_imu
 import vrep_camera
